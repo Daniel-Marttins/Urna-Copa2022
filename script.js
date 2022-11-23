@@ -217,5 +217,5 @@ let urna = new funcoes();
 
 
 document.querySelector('.close').addEventListener('click', e => {
-    window.location.href = "/index.html"
+    window.location.href = "/"
 });
