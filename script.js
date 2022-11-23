@@ -217,5 +217,5 @@ let urna = new funcoes();
 
 
 document.querySelector('.close').addEventListener('click', e => {
-    window.location.href = "/"
+    window.location.href = "https://daniel-marttins.github.io/Urna-Copa2022/"
 });
