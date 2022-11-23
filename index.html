@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>VOTCUP</title>
+</head>
+
+<body>
+    <div class="base-urna">
+        <div class="tela-urna">
+            <div class="campo-dados">
+                <div class="dados">
+                    <div class="img-jogador">
+                        <img src="imagem-do-avatar-perfil-no-fundo-cinzento-142213585.jpg" alt="" class="imgJogador">
+                        <a href="resultados.html">Resultados</a>
+                    </div>
+                    <div class="infos-jogador">
+                        <div class="row-info">
+                            <label>NOME:</label>
+                            <input type="text" class="nome" readonly>
+                        </div>
+                        <div class="row-info">
+                            <label>PAIS:</label>
+                            <input type="text" class="pais" readonly>
+                        </div>
+                        <div class="row-info">
+                            <label>IDADE:</label>
+                            <input type="text" class="idade" readonly>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="voto">...</h1>
+            </div>
+            <div class="campo-votacao">
+                <label>Insira os Números</label>
+                <div class="inputs">
+                    <input type="text" maxlength="1" readonly class="campo1">
+                    <input type="text" maxlength="1" readonly class="campo2">
+                </div>
+            </div>
+        </div>
+
+        <div class="botoes-urna">
+            <div class="row-btn">
+                <input type="button" value="1" onclick="urna.inserir(1)">
+                <input type="button" value="2" onclick="urna.inserir(2)">
+                <input type="button" value="3" onclick="urna.inserir(3)">
+            </div>
+            <div class="row-btn">
+                <input type="button" value="4" onclick="urna.inserir(4)">
+                <input type="button" value="5" onclick="urna.inserir(5)">
+                <input type="button" value="6" onclick="urna.inserir(6)">
+            </div>
+            <div class="row-btn">
+                <input type="button" value="7" onclick="urna.inserir(7)">
+                <input type="button" value="8" onclick="urna.inserir(8)">
+                <input type="button" value="9" onclick="urna.inserir(9)">
+            </div>
+            <div class="row-btn">
+                <input type="button" value="0" onclick="urna.inserir(0)">
+            </div>
+            <div class="row-btn funcoes">
+                <input type="button" value="Branco" class="branco" onclick="urna.branco()">
+                <input type="button" value="Corrigir" class="corrigir" onclick="urna.corrigir()">
+                <input type="button" value="Confirmar" class="confirmar" onclick="urna.votar()">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
