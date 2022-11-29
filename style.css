@@ -247,3 +247,93 @@ body{
     color: white;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.352); 
 }
+
+
+@media (max-width: 700px) {
+
+    body{
+        height: auto;
+    }
+
+    .base-urna{
+        flex-direction: column;
+        width: 95%;
+        height: 150vh;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .tela-urna{
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .dados{
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 100%;
+        height: 80vh;
+    }
+
+    .img-jogador {
+        width: 60%;
+        height: 50%;
+        margin-bottom: 1rem;
+    }
+
+    .infos-jogador{
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 50%;
+    }
+
+    .row-info{
+        justify-content: space-between;
+        height: 30%;
+    }
+
+    .row-info label{
+        font-size: 15px;
+    }
+
+    .row-info input{
+        height: 70%;
+        font-size: 20px;
+    }
+
+    .campo-dados h1{
+        width: 100%;
+        height: 30%;
+        font-size: 18px;
+        margin-top: 1rem;
+    }
+
+    .campo-votacao{
+        width: 100%;
+        height: 20vh;
+    }
+
+    .campo-votacao label{
+        font-size: 20px;
+    }
+
+    .botoes-urna{
+        width: 100%;
+        height: 80vh;
+        margin-top: 1rem;
+    }
+
+    .funcoes{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .funcoes .branco, 
+    .funcoes .corrigir,
+    .funcoes .confirmar{
+        font-size: 16px;
+    }
+}
