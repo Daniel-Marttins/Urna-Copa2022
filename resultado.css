@@ -83,8 +83,30 @@ body{
     font-size: clamp(0vh, (20px), 100vh);
 }
 
-@media(max-width: 900px){
+@media(max-width: 700px){
+
+    .card{
+        width: 90%;
+        height: 90%;
+    }
+
+    .btn input{
+        width: 70%;
+    }
+
+    .close.close{
+        width: 15%;
+    }
+
+    .res{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+    }
+
     .res h1{
-        font-size: 15px;
+        font-size: 16px;
+        margin-left: 1rem;
     }
 }
