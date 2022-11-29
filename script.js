@@ -77,6 +77,12 @@ class funcoes {
                 document.querySelector('.idade').value = '34';
                 document.querySelector('.voto').innerHTML = "Seu Voto Vai Para..." + sessionStorage.getItem(candidato);
                 break;
+            case 0:
+                document.querySelector('.imgJogador').src = 'imagem-do-avatar-perfil-no-fundo-cinzento-142213585.jpg';
+                document.querySelector('.nome').value = sessionStorage.getItem(candidato);
+                document.querySelector('.pais').value = 'Nulo';
+                document.querySelector('.idade').value = 'Nulo';
+                document.querySelector('.voto').innerHTML = "Voto Anulado...";  
         }
 
     }
@@ -88,6 +94,7 @@ class funcoes {
         sessionStorage.setItem('15', 'Akram Hassan');
         sessionStorage.setItem('19', 'Serginho Dest');
         sessionStorage.setItem('22', 'Robert Lewandowski');
+        sessionStorage.setItem('0', 'Nulo');
     }
 
     votar() {
@@ -100,7 +107,7 @@ class funcoes {
         let votos = 0;
 
         if (document.querySelector('.campo1').value == "" && document.querySelector('.campo2').value == "") {
-            this.nulo();
+            alert("Os campos Não Podem Ser Vazio!")
             return
         }
 
@@ -161,39 +168,6 @@ class funcoes {
         }, 2000);
     }
 
-    nulo() {
-
-        document.querySelector('.voto').innerHTML = "Voto Anulado...";
-        let votos = 0;
-
-        if (sessionStorage.getItem('Nulo') !== null) {
-            votos = parseInt(sessionStorage.getItem('Nulo')) + 1;
-            this.gravarVotos('Nulo', votos);
-        }
-        else {
-            sessionStorage.setItem('Nulo', 1);
-        }
-
-
-        setTimeout(() => {
-            let popUp = window.open("teste.html", "_blank", "toolbar=no, scrollbars=no, menubar=no, resizable=no, width=600, height=400, left=" + (screen.width - 600) / 2 + ",top=" + (screen.height - 400) / 2);
-
-
-            setTimeout(() => {
-                popUp.close();
-                document.querySelector('.imgJogador').src = 'imagem-do-avatar-perfil-no-fundo-cinzento-142213585.jpg'
-                document.querySelector('.nome').value = "";
-                document.querySelector('.pais').value = "";
-                document.querySelector('.idade').value = "";
-                document.querySelector('.voto').innerHTML = "...";
-                document.querySelector('.campo1').value = "";
-                document.querySelector('.campo2').value = "";
-            }, 2000);
-
-        }, 3000);
-    }
-
-
     resultado() {
 
         document.querySelector('.resultado').innerHTML = "";
@@ -202,7 +176,7 @@ class funcoes {
             let nome = sessionStorage.getItem(i);
 
             if (sessionStorage.getItem(i) != null) {
-                document.querySelector('.resultado').innerHTML += "Cantidado " + sessionStorage.getItem(i) + " tem " + sessionStorage.getItem(nome) + " votos<br>";
+                document.querySelector('.resultado').innerHTML += sessionStorage.getItem(i) + " tem " + sessionStorage.getItem(nome) + " votos<br>";
             }
         }
 
@@ -217,5 +191,5 @@ let urna = new funcoes();
 
 
 document.querySelector('.close').addEventListener('click', e => {
-    window.location.href = "https://daniel-marttins.github.io/Urna-Copa2022/"
+    window.location.href = "/index.html"
 });
