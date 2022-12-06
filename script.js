@@ -1,3 +1,7 @@
+window.onload = function() { 
+    alert('O numero dos candidatos são:\n09, 10, 12, 15, 19 e 22');
+}
+
 class funcoes {
 
     inserir(valor) {
